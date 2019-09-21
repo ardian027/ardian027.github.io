@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deepweeb Login</title>
+	<link rel="stylesheet" type="text/css" href="csslogin.css">
+</head>
+<body>
+	<h1>18+</h1>
+	<h2>Deepweeb</h2>
+	<form class="sign_up" action="/action_page.php">
+		
+			<div>
+				<label class="a">Username :</label>
+				<label>NIM :</label>
+			</div>
+			<div>
+				<input type="text" id="username" name="username" placeholder="Username"required>
+				<input type="number" id="nim"name="nim" placeholder="NIM" required>
+			</div>
+			<div>
+				<label  class="b">Phone Number :</label>
+				<label>Birthday :</label>
+			</div>
+			<div>
+				<input type="number" id="phone" name="phone" placeholder="Phone Number" required>
+				<input type="date" id="date" name="date" required>
+			</div>
+			<div>
+				<label>Password :</label>
+			</div>
+			<div>
+				<input type="password" name="password" id="password" placeholder="Password"pattern=".{6,}" title="Six or more characters." required>
+			</div>
+			<div>
+				<label>Jenis Kelamin :</label>
+			</div>
+			<div>
+				<input type="radio" name="jenis_kelamin" checked=""><label class="radio">Laki-laki</label> 
+				<input type="radio" name="jenis_kelamin"><label class="radio">Perempuan</label>
+			</div>
+			<div>
+				<input type="checkbox" name="setuju" required><label class="radio">Saya menyetujui syarat dan ketentuan</label>
+			</div>
+			<div>
+				<button class="up"type="Submit">Sign up</button>
+			</div>
+	</form>	
+
+	<h3>Login</h3>
+	<form class="sign_in" action="/action_page.php">
+			
+			<div>
+				<label class="a">Username :</label>
+			</div>
+			<div>
+				<input type="text" id="username" name="username" placeholder="Username"required>
+			</div>
+			<div>
+				<label>Password :</label>
+			</div>
+			<div>
+				<input type="password" name="password" id="password" placeholder="Password"
+			</div>
+			<div>
+				<button class="in" type="Submit">Login</button>
+			</div>
+	</form>	
+	
+</body>
+</html>
