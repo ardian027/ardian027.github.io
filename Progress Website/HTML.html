@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Majestic Banyuwangi</title>
+	<link rel="stylesheet" type="text/css" href="STYLE.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases//v5.11.1/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  			$("#Button-SignIn").click(function(){
+    			$("#form2").toggle(); 
+    	});
+  			$("#Button-SignIn").click(function(){
+    			$("#form1").hide(); 
+    	});
+  			$("#close").click(function(){
+    			$("#form1").hide(); 
+    	});
+    		$("#SignUp").click(function(){
+    			$("#form1").show();
+  		});
+    		$("#SignUp").click(function(){
+    			$("#form2").hide();
+  		});
+	});
+	</script>
+</head>
+<body>
+
+	<div class="header">
+		<h1 class="logo">Majestic Banyuwangi</h1>
+		
+		<ul class="menu">
+			<a href="#">Home</a>
+			<a href="#">Event</a>
+			<a href="#">Kuliner</a>
+			<a href="#">Wisata</a>
+			<a href="#">About</a>
+		</ul>
+	</div>
+
+	<div class="tombol">
+		<p id="Button-SignIn" class="Button">Sign in <i class="fas fa-sign-in-alt"></i></p>
+		
+	</div>
+
+	<form autocomplete="off" class="box" id="form1" action="HTML.html" method="post">
+		<div class="close" id="close">
+			<i class="fas fa-times"></i>
+		</div>
+		<h2>Sign up</h2>
+		<div class="input">
+			<input type="text" name="Username" placeholder="Username" required>
+			<input type="email" name="Email" placeholder="Email" required>
+		</div>
+		<div class="input">
+			<input type="password" name="Password" id="password" placeholder="Password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'At least six character' : ''); if(this.checkValidity()) form.password2.pattern = this.value;" required>
+			<input type="password" name="Confirm Password" id="password2" placeholder="Confirm Password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Incorrect password' : '');" required>
+		</div>
+		<div class="radio">
+			<label for="Jenis Kelamin" class="label">Jenis Kelamin</label><br>
+			<label class="jk">
+				<input type="radio" name="Jenis Kelamin" checked>Laki-laki
+				<span></span>
+			</label>
+			<label class="jk">	
+				<input type="radio" name="Jenis Kelamin">Perempuan
+				<span></span>
+			</label><br>
+			<label class="ck">
+				<input type="checkbox" name="Setuju" required>I agree with term and condition
+				<span class="check"></span>
+			</label>
+		</div>
+		<input class="Sign_up" type="submit" name="Sign_up" value="Sign up">
+	</form>
+
+	<form class="box2" id="form2" action="HTML.html" method="post">
+		<h3>Login</h3>
+		<div class="input2">
+			<input type="text" name="username2" placeholder="Username" required>
+		</div>
+
+		<div class="input2">
+			<input type="password" name="password_in" placeholder="Password" required>
+		</div>
+
+		<input class="Login" type="submit" name="Login" value="Login">
+
+		<div class="bottom-text">
+			Don't have an account? <a class="bottom" id="SignUp" href="#">Sign up</a>
+		</div>
+	</form>
+
+</body>
+</html>
