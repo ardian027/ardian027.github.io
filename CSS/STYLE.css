@@ -1,0 +1,350 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-image: url(https://riangtour.files.wordpress.com/2017/03/menjangan-island-5.jpeg);
+	background-size: 100%;
+}
+
+
+/*HEADER DAN ATTRIBUTE*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.tombol{
+	position: absolute;
+	border: none;
+	width: 105px;
+	height: 40px;
+	top: 0;
+	right: 0;
+	margin: 28px;
+	outline: none;
+	background: none;
+	border-radius: 25%;
+}
+
+
+
+.header{
+	height: 100px;
+	background: rgba(0,200,200,0.5);
+	top: 0;
+}
+
+.logo{
+	line-height: 100px;
+	float: left;
+	margin-left: 20px;
+}
+
+.menu{
+	float: right;
+	line-height: 100px;
+	margin-right: 150px;
+}
+
+.menu a{
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 10px;
+}
+
+.menu a:hover{
+	color: #333;
+}
+
+.tombol p{
+	float: left;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+	cursor: pointer;
+}
+
+.tombol p:hover{
+	color: white;
+}
+
+
+/*FORM*/
+
+::placeholder{
+	color: white;
+}
+
+.box{
+	width: 600px;
+	height: 400px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(0,100,200,0.4);
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 15px 0 25px rgba(0,0,0,.5);
+	display: none;
+}
+ 
+.box h2{
+	margin: 20px 0 30px 0;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-shadow: 4px 4px 4px #333;
+}
+
+.box input[type= "text"],.box input[type= "password"],
+.box input[type= "number"],.box input[type="email"]{
+	border: 2px solid cyan;
+	background: none;
+	margin: 20px 20px auto;
+	text-align: center;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 25px;
+	transition: 0.7s;
+}
+
+.box input[type= "text"]:focus,.box input[type= "password"]:focus,
+.box input[type= "number"]:focus,.box input[type= "email"]:focus{
+	width: 240px;
+	border-color: white;
+	background: linear-gradient(120deg,#3498db,#8e44ad);
+}
+
+.radio{
+	width: 470px;
+	position: relative;
+	top: 10px;
+	left: 50px;
+	text-align: left;
+	padding: 10px;
+}
+
+.label{
+	position: relative;
+	top: 0;
+	left: 0;
+	font-size: 18px;
+	color: white;
+}
+
+.jk{
+	font-size: 16px;
+	color: white;
+	font-weight: 500;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding-left: 25px;
+	margin-top: 10px;
+}
+
+.jk + .jk{
+	margin-left: 15px;
+}
+
+.jk:hover{
+	cursor: pointer;
+}
+
+.jk input[type="radio"]{
+	display: none;
+}
+
+.jk span{
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	border: 3px solid white;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.jk span::after{
+	content: "";
+	height: 8px;
+	width: 8px;
+	background: rgba(0,0,200,0.6);
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	border-radius: 50%;
+	transition: 300ms ease-in-out 0s;
+}
+
+.jk [type="radio"]:checked ~ span::after{
+	transform: translate(-50%,-50%) scale(1);
+}
+
+.ck{
+	font-size: 16px;
+	color: white;
+	font-weight: 500;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding-left: 25px;
+	margin-top: 10px;
+}
+
+.ck:hover{
+	cursor: pointer;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+.ck span{
+	height: 10px;
+	width: 10px;
+	border: 3px solid white;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.ck span::after{
+	content: "";
+	height: 8px;
+	width: 4px;
+	border-right: 3px solid blue;
+	border-bottom: 3px solid blue;
+	display: block;
+	position: relative;
+	left: 10%;
+	top: 40%;
+	transform: rotate(45deg) translate(-50%,-50%) scale(0);
+	transition: 300ms ease-in-out 0s;
+}
+
+.ck [type="checkbox"]:checked + span{
+	background: white;
+}
+
+.ck [type="checkbox"]:checked ~ span::after{
+	transform: rotate(45deg) translate(-50%,-50%) scale(1);
+}
+
+
+.box .Sign_up{
+	border: 2px solid cyan;
+	background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+	background-size: 200%;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 25px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.box .Sign_up:hover{
+	background-position: right;
+}
+
+
+
+/*FORM LOGIN*/
+
+
+.box2{
+	width: 300px;
+	height: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(0,100,200,0.4);
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 15px 0 25px rgba(0,0,0,.5);
+	display: none;
+}
+
+.box2 h3{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-shadow: 4px 4px 4px #333;
+	margin-bottom: 30px;
+}
+
+.box2 input[type="text"], .box2 input[type="password"]{
+	border: 2px solid cyan;
+	background: none;
+	margin: 20px 20px auto;
+	text-align: center;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 25px;
+	transition: 0.7s;
+}
+
+.box2 input[type="text"]:focus, .box2 input[type="password"]:focus{
+	border-bottom: 2px solid white;
+	border-top: 2px solid white;
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+	width: 240px;
+}
+
+.box2 .Login{
+	width: 200px;
+	border: 2px solid cyan;
+	background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+	background-size: 200%;
+	display: block;
+	margin: 30px auto;
+	text-align: center;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.box2 .Login:hover{
+	background-position: right;
+}
+
+.bottom-text{
+	text-align: center;
+	margin-top: 10px;
+	color: black;
+}
+
+.bottom{
+	color: white;
+	text-decoration: none;
+}
+
+.close{
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	font-size: 30px;
+	cursor: pointer;
+}
