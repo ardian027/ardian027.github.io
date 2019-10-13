@@ -18,14 +18,14 @@ body{
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-image: url(File_Gambar/PULAU.jpeg);
+	background-image: url(../File_Gambar/PULAU.jpeg);
 	background-size: cover;
 }
 
 .page::before{
 	content: "";
 	filter: blur(5px);
-	background-image: url(File_Gambar/PULAU.jpeg);
+	background-image: url(../File_Gambar/PULAU.jpeg);
 	position: absolute;
 	top: 0;
 	left: 0;
