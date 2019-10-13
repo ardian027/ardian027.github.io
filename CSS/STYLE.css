@@ -589,6 +589,10 @@ h3{
 	border: 1px solid grey;
 }
 
+.event-content a{
+	text-decoration: none;
+}
+
 .next{
 	position: absolute;
 	top: 50%;
