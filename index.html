@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devide-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Domestic Banyuwangi</title>
+	<link rel="stylesheet" type="text/css" href="CSS/STYLE.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases//v5.11.1/css/all.css">
+</head>
+<body>
+	<section id="SEC">
+		<div  id="section1" class="page-container">
+			<nav id ="navbar" class="header">
+				<img src="File_Gambar/domestic.png">
+				
+				<ul class="menu">
+					<li><a href="#section1">Home</a></li>
+					<li><a href="#section2">Event</a></li>
+					<li><a href="#section3">Wisata</a></li>
+					<li><a href="#section4">Kuliner</a></li>
+					<li><a href="#section5">About</a></li>
+				</ul>
+
+				<div class="tombol">
+					<a id="Button-SignIn" class="Button" onclick="signIn()">Sign in <i class="fas fa-sign-in-alt"></i></a>	
+				</div>
+				<div class="bar">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+
+				<button class="user-log" title= "Login" onclick="signIn()"><i class="fas fa-user"></i></button>
+			</nav>
+		</div>
+	</section>
+
+		
+	<!-- SIGN UP -->
+	<div id="signUpcontainer" class="form-container">
+			<form class="box" id="form1" autocomplete="off">
+				<div class="close" id="close" onclick="Close()" title="Close"><i class="fas fa-times"></i>
+				</div>
+
+				<h2>Sign up</h2>
+
+				<div class="bot-register">
+				<div>
+					<input type="text" name="Username" placeholder="Username" required>
+					<input type="email" name="Email" placeholder="Email" required>
+				</div>
+
+				<div>
+					<input type="password" name="Password" id="password" placeholder="Password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'At least six character' : ''); if(this.checkValidity()) form.password2.pattern = this.value;" required>
+					<input type="password" name="Confirm Password" id="password2" placeholder="Confirm Password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Incorrect password' : '');" required>
+				</div>
+
+				<div class="radio">
+					<label for="Jenis Kelamin" class="label">Gender</label><br>
+					<label class="jk">
+						<input type="radio" name="Jenis Kelamin" checked>Male
+						<span></span>
+					</label>
+					<label class="jk">	
+						<input type="radio" name="Jenis Kelamin">Female
+						<span></span>
+					</label><br>
+					<label class="ck">
+						<input type="checkbox" name="Setuju" required>I agree with <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+						<span class="check"></span>
+					</label>
+				</div>
+
+				<button class="Sign_up">Sign up</button>
+				</div>
+			</form>
+
+	</div>
+
+
+	<!-- LOGIN -->
+	<div id="signIncontainer" class="form-container">
+
+			<form class="box2" id="form2" autocomplete="off">
+
+				<div class="close" id="close" onclick="Close()" title="Close"><i class="fas fa-times"></i>
+				</div>
+
+				<h3>Login</h3>
+				
+				<div class="bot">
+					<div class="input2">
+						<i class="fas fa-user"></i>
+						<input type="text" name="username2" placeholder="Username" required>
+					</div>
+
+					<div class="input2">
+						<i class="fas fa-key"></i>
+						<input type="password" name="password_in" placeholder="Password" required>
+					</div>
+
+					<input class="Login" type="submit" name="Login" value="Login">
+					<a class="forget" href="#">Forget Password?</a>
+
+					<div class="bottom-text">
+						Don't have an account? <a class="bottom" id="SignUp" href="#" onclick="signUp()">Sign up</a><br>
+						<hr class="garisOr">or<hr class="garisOr"> <br>login with
+							<div class="middle">
+								<a title="Facebook" class="btn" href="https://www.facebook.com">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+
+								<a title="Gmail" class="btn2" href="https://www.gmail.com">
+									<i class="fab fa-google"></i>
+								</a>
+							</div>
+					</div>
+				</div>
+			</form>
+	</div>
+
+
+	<!-- EVENT -->
+	<section id="section2">
+
+		<div class="Event">
+			<h3>Banyuwangi Event Festival</h3>
+		</div>
+
+		<div class="contents-event">
+			<div class="content-event">
+				<figure  class="figura-event">
+					<a href=""><img src="File_Gambar/kuntulan.jpg">
+					<div class="read_more"><span>Read more</span></div></a>
+				</figure>
+				<a class="judul-event" href="#">Festival Kuntulan Caruk</a>
+				<hr>
+				<p><i class="far fa-calendar"></i>6 Oct</p>
+			</div>
+		
+			<div class="content-event">
+				<figure class="figura-event">
+					<a href=""><img src="File_Gambar/calender.png">
+					<div class="read_more"><span>Read more</span></div></a>
+				</figure>
+				<a class="judul-event" href="#">Launcing Calender Of Event</a>
+				<hr>
+				<p><i class="far fa-calendar"></i>29 Jan</p>
+			</div>
+		
+			<div class="content-event">
+				<figure class="figura-event">
+					<a href=""><img src="File_Gambar/bec.png">
+					<div class="read_more"><span>Read more</span></div></a>
+				</figure>
+				<a class="judul-event" href="#">Banyuwangi Ethno Carnival</a>
+				<hr>
+				<p><i class="far fa-calendar"></i>27 Jul</p>
+			</div>
+			
+			<div class="more">
+				<p>Lihat Semua Event</p>
+			</div>
+		</div>
+			
+	</section>
+
+
+	<!-- WISATA -->
+	<section id="section3"> 
+		<div class="Wisata">
+			<h3>Wisata Favorit</h3>
+		</div>
+
+		<div class="contents-wisata">
+			<div class="content-wisata">
+				<figure class="figura-wisata">
+					<a href=""><img src="File_Gambar/w1.png"></a>
+				</figure>
+				<a class="judul-wisata" href="#">Kawah Ijen</a>
+				<div class="rating">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+				</div>
+			</div>
+
+			<div class="content-wisata">
+				<figure class="figura-wisata">
+					<a href=""><img src="File_Gambar/w2.png"></a>
+				</figure>
+				<a class="judul-wisata" href="#">Teluk Hijau</a>
+				<div class="rating">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star-half"></i>
+				</div>
+			</div>
+
+			<div class="content-wisata">
+				<figure class="figura-wisata">
+					<a href=""><img src="File_Gambar/w3.png"></a>
+				</figure>
+				<a class="judul-wisata" href="#">Pulau Merah</a>
+				<div class="rating">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+			</div>
+
+			<div class="content-wisata">
+				<figure class="figura-wisata">
+					<a href=""><img src="File_Gambar/w4.jpg"></a>
+				</figure>
+				<a class="judul-wisata" href="#">Pantai Wedi Ireng</a>
+				<div class="rating">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+			</div>
+
+			<a class="lihat" href="">Lihat semua ❯</a>
+		</div>
+
+	</section>
+
+
+	<!-- KULINER -->
+	<section id="section4">
+		<div class="Kuliner">
+			<h3>Makanan Favorit</h3>
+		</div>
+	
+		<div class="contents-kuliner">
+			<div class="content-kuliner">
+				<figure class="figura-kuliner">
+					<a href=""><img src="File_Gambar/k1.png"></a>
+				</figure>
+				<a class="judul-kuliner" href="#">Kue Nastar</a>
+			</div>
+
+			<div class="content-kuliner">
+				<figure class="figura-kuliner">
+					<a href=""><img src="File_Gambar/k2.png"></a>
+				</figure>
+				<a class="judul-kuliner" href="#">Sego Tempong</a>
+			</div>
+
+			<div class="content-kuliner">
+				<figure class="figura-kuliner">
+					<a href=""><img src="File_Gambar/k3.png"></a>
+				</figure>
+				<a class="judul-kuliner" href="#">Pie Glenmore</a>
+			</div>
+
+			<div class="content-kuliner">
+				<figure class="figura-kuliner">
+					<a href=""><img src="File_Gambar/k4.png"></a>
+				</figure>
+				<a class="judul-kuliner" href="#">Sego Campur</a>
+			</div>
+
+			<a class="lihat" href="">Lihat semua ❯</a>
+		</div>
+
+	</section>
+
+
+	<!-- FOOTER -->
+	<section id="section5">
+
+		<div class="partner">
+			<p>Partner Kita :</p>
+			<img src="File_Gambar/Pesona Indonesia.png">
+			<img src="File_Gambar/Majestic Banyuwangi.jpg">
+		</div>
+
+		<div class="footer">
+			<div class="f1">
+				<h5><p class="satu">Domestic</p><br><p class="dua">Banyuwangi</p></h5>
+				<p class="r">Domestic Banyuwangi adalah website yang memberikan informasi kepada wisatawan maupun lokal mengenai wisata maupun kuliner khas yang ada di Banyuwangi</p>	
+			</div>
+
+			<div class="f2">
+				<p>follow us</p>
+				<div class="follow">
+					<a class="fl" href="#" title="Facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+
+					<a class="fl" href="#" title="Twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+
+					<a class="fl" href="#" title="Google">
+						<i class="fab fa-google-plus-g"></i>
+					</a>
+
+					<a class="fl" href="#" title="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+			<div class="contact">
+				<p class="up">Contact with Us</p>
+				<div id="ct1" class="ct">
+					<a href="#"><i class="fas fa-phone"></i>(0333)424172</a>
+				</div>
+				<div id="ct2" class="ct">
+					<a href="#"><i class="far fa-envelope"></i>bwitourism1@gmail.com</a>
+				</div>
+				<div class="suggest">
+					<p>Newsletter</p>
+					<input type="text" name="contact" placeholder="Your Email">
+					<input type="submit" name="submit" value="Submit">
+				</div>
+			</div>
+			<hr class="ftLine">
+			<p class="copyright">© 2019 Banyuwangidomestic</p>
+		</div>
+	</section>
+	
+	<script src="JS/JAVA.js"></script>
+</body>
+</html>
